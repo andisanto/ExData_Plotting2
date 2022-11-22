@@ -19,7 +19,7 @@ df2 <- aggregate(Emissions ~ year + fips,sub2, sum)
 
 df <-rbind(df1, df2)
 
-png("~/ExData_Plotting2/Plot6.png",width=480,height=480,units="px",bg="transparent")
-qplot(year, Emissions, data = df,colour=fips, geom= "line") + theme_gray() + ggtitle("Motor Vehicle-Related Emissions in Baltimore") + xlab("Year") + ylab("Emission Levels")
+png("~/ExData_Plotting2/Plot6.png",width=880,height=480,units="px",bg="transparent")
+qplot(year, Emissions, data = df,colour=fips, geom= "line") + theme_gray() + ggtitle('Total Emissions from motor vehicle (type=ON-ROAD) in Baltimore City, MD (fips = "24510") vs Los Angeles, CA (fips = "06037")  1999-2008') + xlab("Year") + ylab("Emission Levels")
 
 dev.off()
